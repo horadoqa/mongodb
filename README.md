@@ -144,9 +144,33 @@ show databases
 admin   40.00 KiB
 config  60.00 KiB
 local   40.00 KiB
+horadoqa  12.00 KiB
 ```
 
+## Acessando o database
 
 ```bash
-mongod
+use horadoqa
 ```
+
+## Listando as tabelas
+
+```bash
+horadoqa> show tables
+users
+```
+
+## Visualizar conteúdo
+
+```bash
+horadoqa> db.users.find().pretty()
+```
+
+## Adicionando usuário utilizando o curl
+
+```bash
+curl -X POST http://localhost:5000/api/users -H "Content-Type: application/json" -d '{"name":"João","email":"joao@example.com","phone":"123456789","country":"Brasil","framework":"Cypress","comments":"Gostei muito!"}'
+Usuário salvo com sucesso!% 
+```
+
+Instalar o compass
