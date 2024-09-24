@@ -130,3 +130,23 @@ Após instalar o Docker, você pode executar o MongoDB com o seguinte comando:
 ```bash
 sudo docker run --name mongodb -d -p 27017:27017 -v mongodb-data:/data/db mongo
 ```
+
+## Executando
+
+```bash
+mongosh
+
+test> help
+```
+
+```bash
+show databases
+admin   40.00 KiB
+config  60.00 KiB
+local   40.00 KiB
+```
+
+
+```bash
+mongod
+```
